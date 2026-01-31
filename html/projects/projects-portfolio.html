@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <!--===========================================================================
- ! Projects Portfolio ~
- !    A Table of contents showing my availible work
+ ! Website Template ~
+ !    This is the description for the template webpage
  ! Author(s): Alexander Del Brocco
+ ! Started  : 16th of January 2024
 ============================================================================-->
 
 <html lang="en">
-<!--Header Section ============================================================
+<!--Header Section ------------------------------------------------------------
  !    Section that contains most of the meta data for the website.
-============================================================================-->
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AJDB:C - Projects Portfolio</title>
-  <meta name="author" content="Alexander del Brocco">
-  <meta name="description" content="Welcome to the AJDB:C, I am a Computer Science student at the University of Leeds">
-  <meta name="keywords" content="">
-  <link rel="stylesheet" href="../../css/style.css">
-  <script defer src="../../js/fadeIn.js"></script>
-</head>
-
-<!--Body Section ==============================================================
+------------------------------------------------------------------------------>
+  <head>
+    <title>AJDB:C - Portfolio</title>
+    <link rel="shortcut icon" href="../../img/general/home-fav.ico" type="image/x-icon" 
+      alt="credit: https://www.flaticon.com/free-icons/study" />
+    <meta author="Alexander del Brocco"
+    description="Welcome to the AJDB:C Homepage, I am a Computer Science
+    student at the universiry of Leeds " 
+    keywords="" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/bootstrap/node_modules/bootstrap/scss/bootstrap.css">
+    <link rel="" href="../../js/"/>
+  </head>
+<!--Body Section --------------------------------------------------------------
  !    Section that contains the actual viewable content of the website.
-============================================================================-->
+------------------------------------------------------------------------------>
   <body>
-
 <!--Navigation Bar -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  !    Allows the user to access any part of the website from anywhere, at any
  !    time.
@@ -34,18 +36,17 @@
         <div class="nav-bar">
           <div class="nav-branch" id="nav-root-branch"> <!--Home Nav Button-->
             <div class="nav-branch-root" id="nav-home">
-              <a class="nav-root" href="../homepage.html">
+              <a class="nav-root" id="nav-home" href="../homepage.html">
                 HOME
               </a>
             </div>
           </div>
         </div>
 
-        <!--Website Branches Side of Nav Bar -->
+        <!--Website Branches Side of Nav Bar ----------------------------------->
 
         <!--Credentials - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <div class="nav-branches">
-
           <div class="nav-branch" id="credentials-branch">
             <div class="nav-branch-root">
               <a class="nav-root" href="../credentials/home.html">
@@ -72,7 +73,6 @@
 
           <!-- Projects - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
           <div class="nav-branch">
-
             <div class="nav-branch-root">
               <a class="nav-root" href="../projects/home.html">
                 PROJECTS
@@ -91,9 +91,8 @@
             </div>
           </div>
 
-          <!--Personal - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+          <!--Personal - - - - - - - - - - - - - - - - - - - - - - - - - - - --->
           <div class="nav-branch">
-
             <div class="nav-branch-root">
               <a class="nav-root" href="../personal/home.html">
                 PERSONAL
@@ -124,7 +123,6 @@
 
           <!--Contact - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
           <div class="nav-branch">
-
             <div class="nav-branch-root">
               <a class="nav-root" id="nav-contact" href="../contact/home.html">
                 CONTACT
@@ -151,19 +149,12 @@
       </nav>
     </header>
 
-<!--Main Content of Website-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
     <main class="projects-portfolio">
-
       <div class="container-fluid" id="title">
-        <h1>Projects Portfolio</h1>
-        <hr>
+        <h1>Projects Portfolio<hr/></h1>
       </div>
-
-<!--HTML Table -->
       <div class="container-xxl" id="table">
-    
         <table>
-          <!--Header Row-->
           <tr>
             <th>Title</th>
             <th>Description</th>
@@ -175,7 +166,6 @@
             <th>Tag</th>
           </tr>
 
-          <!--First Row-->
           <tr>
             <td>File Manipulation</td>
             <td>Basic file accessing and data manipulation</td>
@@ -187,7 +177,6 @@
             <td>Academic</td>
           </tr>
 
-          <!--Second Row-->
           <tr>
             <td>Leopard</td>
             <td>General Data analysis</td>
@@ -199,7 +188,6 @@
             <td>Academic</td>
           </tr>
 
-          <!--Third Row-->
           <tr>
             <td>Bitmap File Processing</td>
             <td>Data formatting and processing of EB files</td>
@@ -211,7 +199,6 @@
             <td>Academic</td>
           </tr>
 
-          <!--Forth Row-->
           <tr>
             <td>Baccarat Card Game</td>
             <td>Command Line Card Game</td>
@@ -223,7 +210,6 @@
             <td>Personal</td>
           </tr>
 
-          <!--Fifth Row-->
           <tr>
             <td>GPS Tracker</td>
             <td>Program that processes GPS co-ordinates</td>
@@ -235,7 +221,6 @@
             <td>Academic</td>
           </tr>
 
-          <!--Sixth Row-->
           <tr>
             <td>Chinook</td>
             <td>Advanced Database query manipulation with SQL</td>
@@ -247,7 +232,6 @@
             <td>Academic</td>
           </tr>
 
-          <!--Seventh Row-->
           <tr>
             <td>Computer Processor Design</td>
             <td>Emulating a processer in HDL</td>
@@ -263,12 +247,12 @@
     </main>
 
 <!--Footer Section ============================================================
- !    Marks the end of the webpage, as well as containing helpful links 
- !    and the copyright
+!    Marks the end of the webpage, as well as containing helpful links 
+!    and the copyright
 ============================================================================-->
     <footer>
 
-      <!--Copyright Section -->
+<!--Copyright Section -------------------------------------------------------->
       <div class="copyright">
 
         <!--To Top Button-->
@@ -281,74 +265,61 @@
 
       <!--Seperator for Map-->
       <div class="seperator"></div>
-  
-  <!--Website Map 
-   !    Gives the user a "no-nonsense" view of the webpage, almost like a
-   !    file directory, to provide a transparent means of navigation once
-   !    a user has already arrived at the bottem of the page.
-   !-->   
-        <div class="map">
-          <ul class="map">
-            <li> <!--Map Root, Homepage-->
-              <a href="../homepage.html">Homepage</a>
-            </li>
-  
-            <!--Map Branch : Credentials Branch -->
-            <li>
-              <ul>
-                <li>
-                  <a href="../credentials/home.html">Credentials - Home</a>
-                </li>
-  
-                <li><hr></li> <!--Map Leaves, Credentials-->
-  
-                <li>
-                  <ul>
-                    <li><a href="../../docs/curiculumvitae.pdf">CV</a></li>
-                    <li><a href="../../docs/standin-cover-letter.pdf">Cover Letter</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-  
-            <!--Map Branch : Projects Branch -->
-            <li>
-              <ul>
-                <li>
-                  <a href="../projects/home.html">Projects - Home</a>
-                </li>
-  
-                <li><hr></li>
-  
-                <li>
-                  <ul> <!--Map Leaves, Projects-->
-                    <li><a href="../projects/projects-portfolio.html">Portfolio</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-  
-            <!--Map Branch : Personal Branch -->
-            <li>
-              <ul>
-                <li>
-                  <a href="../personal/home.html">Personal - Home</a>
-                </li>
-  
-                <li><hr></li>
-  
-                <li>
-                  <ul> <!--Map Leaves, Personal-->
-                    <li><a href="../personal/blog.html">Blog</a></li>
-                    <li><a href="../personal/hobbies.html">Hobbies</a></li>
-                    <li><a href="../personal/holidays.html">Holidays</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </footer>
 
+<!--Website Map ---------------------------------------------------------------
+  !    Gives the user a "no-nonsense" view of the webpage, almost like a
+  !    file directory, to provide a transparent means of navigation once
+  !    a user has already arrived at the bottem of the page.
+------------------------------------------------------------------------------>   
+      <div class="map">
+        <ul class="map">
+          <li> <!--Map Root, Homepage-->
+            <a href="../homepage.html">Homepage</a>
+          </li>
+
+<!--Map Branch : Credentials Branch ------------------------------------------>
+          <ul>
+            <li>
+              <a href="../credentials/home.html">Credentials - Home</a>
+            </li>
+
+              <hr/> <!--Map Leaves, Credentials-->
+
+            <ul>
+              <li><a href="../../docs/curiculumvitae.pdf">CV</a></li>
+              <li><a href="../../docs/standin-cover-letter.pdf">Cover Letter</a></li>
+            </ul>
+          </ul>
+
+<!--Map Branch : Projects Branch --------------------------------------------->
+          <ul>
+            <li>
+              <a href="../projects/home.html">Projects - Home</a>
+            </li>
+
+            <hr/>
+
+            <ul> <!--Map Leaves, Projects-->
+              <li><a href="../projects/projects-portfolio.html">Portfolio</a></li>
+            </ul>
+          </ul>
+
+<!--Map Branch : Personal Branch --------------------------------------------->
+          <ul>
+            <li>
+              <a href="../personal/home.html">Personal - Home</a>
+            </li>
+
+            <hr/>
+
+            <ul> <!--Map Leaves, Personal-->
+              <li><a href="../personal/blog.html">Blog</a></li>
+              <li><a href="../personal/hobbies.html">Hobbies</a></li>
+              <li><a href="../personal/holidays.html">Holidays</a></li>
+            </ul>
+          </ul>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

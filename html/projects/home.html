@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!--===========================================================================
- ! Projects Home ~
- !    A page dedicated to directing users to my portfolio and to show my 
- !    ability in multiple programming languages
+ ! Website Template ~
+ !    This is the description for the template webpage
  ! Author(s): Alexander Del Brocco
+ ! Started  : 16th of January 2024
 ============================================================================-->
 
 <html lang="en">
@@ -11,13 +11,16 @@
  !    Section that contains most of the meta data for the website.
 ============================================================================-->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AJDB:C - Projects Home</title>
-  <meta name="author" content="Alexander del Brocco">
-  <meta name="description" content="Welcome to the AJDB:C, I am a Computer Science student at the University of Leeds">
-  <meta name="keywords" content="">
-  <link rel="stylesheet" href="../../css/style.css">
+  <title>AJDB:C - Projects</title>
+  <link rel="shortcut icon" href="../../img/general/home-fav.ico" type="image/x-icon" 
+    alt="credit: https://www.flaticon.com/free-icons/study" />
+  <meta author="Alexander del Brocco"
+  description="Welcome to the AJDB:C Homepage, I am a Computer Science
+  student at the University of Leeds " 
+  keywords="" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="" href="../../js/"/>
   <script defer src="../../js/fadeIn.js"></script>
 </head>
 
@@ -35,18 +38,17 @@
         <div class="nav-bar">
           <div class="nav-branch" id="nav-root-branch"> <!--Home Nav Button-->
             <div class="nav-branch-root" id="nav-home">
-              <a class="nav-root" href="../homepage.html">
+              <a class="nav-root" id="nav-home" href="../homepage.html">
                 HOME
               </a>
             </div>
           </div>
         </div>
 
-        <!--Website Branches Side of Nav Bar -->
+        <!--Website Branches Side of Nav Bar ----------------------------------->
 
         <!--Credentials - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <div class="nav-branches">
-
           <div class="nav-branch" id="credentials-branch">
             <div class="nav-branch-root">
               <a class="nav-root" href="../credentials/home.html">
@@ -73,7 +75,6 @@
 
           <!-- Projects - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
           <div class="nav-branch">
-
             <div class="nav-branch-root">
               <a class="nav-root" href="../projects/home.html">
                 PROJECTS
@@ -92,9 +93,8 @@
             </div>
           </div>
 
-          <!--Personal - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+          <!--Personal - - - - - - - - - - - - - - - - - - - - - - - - - - - --->
           <div class="nav-branch">
-
             <div class="nav-branch-root">
               <a class="nav-root" href="../personal/home.html">
                 PERSONAL
@@ -125,7 +125,6 @@
 
           <!--Contact - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
           <div class="nav-branch">
-
             <div class="nav-branch-root">
               <a class="nav-root" id="nav-contact" href="../contact/home.html">
                 CONTACT
@@ -152,15 +151,15 @@
       </nav>
     </header>
       
-  <!--Projects Introduction 
+  <!--Projects Introduction -----------------------------------------------------
   !    Brief section introducing this section of the webpage, giving more links
   !    and options to the user in case they're looking for something specific
   !    or related, but have simply come to the wrong place.
-  !-->
+  ------------------------------------------------------------------------------>
     <main class="projects-home">
       <div class="full-width" id="projects-introduction">
 
-        <!--Introduction Text and Links -->
+        <!--Introduction Text and Links ---------------------------------------->
         <div class="left-column">
           <div class="contents hidden">
 
@@ -168,9 +167,7 @@
             <div class="text-box">
 
               <!--Webpage Heading-->
-              <h1>Projects</h1>
-
-              <hr>
+              <h1>Projects<hr/></h1>
 
               <!--Introduction-->
               <p>
@@ -185,7 +182,7 @@
                 
               </p>
 
-              <br>
+              <br/>
                 
               <p>I also 
                 have a github account specifically to showcase my programming 
@@ -199,7 +196,7 @@
                 and I'll try my best to satisfy your request. 
               </p>
 
-              <br>
+              <br/>
 
               <hr>
 
@@ -208,28 +205,34 @@
 
             <!--Related Links - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div class="button-box">
-              <a class="button" href="../projects/projects-portfolio.html">
-                Portfolio
-              </a>
+              <button class="styled">
+                <a href="../projects/projects-portfolio.html">
+                  Portfolio
+                </a>
+              </button>
 
-              <a class="button" href="https://www.linkedin.com/in/alexander-del-brocco-337776266/">
-                LinkedIn
-              </a>
+              <button class=styled>
+                <a href="">
+                  LinkedIn
+                </a>
+              </button>
 
-              
-              <a class="button" href="https://github.com/EllisdeBronki">
-                Github
-              </a>
+              <button class=styled>
+                <a href="">
+                  Github
+                </a>
+              </button>
 
-              <a class="button" id="contact-button" href="../contact/home.html">
-                Contact
-              </a>
-              
+              <button class="styled" id="contact-button">
+                <a href="../contact/home.html">
+                  Contact
+                </a>
+              </button>
             </div>
           </div>
         </div>
 
-        <!--Webpage Themed Image -->
+        <!--Webpage Themed Image ----------------------------------------------->
         <div class="right-column hidden">
           <img
             class="in-container"
@@ -239,16 +242,15 @@
         </div>
       </div>
 
-      <!--Programming Language Patches 
+      <!--Programming Language Patches ------------------------------------------
         !    Displaying all of the logos of the programming languages I know, 
         !    almost in a "Scouts" theme, as if they're badges that you have to
         !    earn. Each is also a link to the home webpage of the language source,
         !    giving the user a chance to quickly view a description if the  
         !    language is not know by them
-        !-->
+      -------------------------------------------------------------------------->
       <div class="full-width" id="projects-languages">
-
-        <!--BASh -->
+        <!--BASh ----------------------------------------------------------------->
         <a 
           class="longer"
           href="https://www.gnu.org/software/bash/"
@@ -260,7 +262,7 @@
           > 
         </a>
 
-        <!--PowerShell --> 
+        <!--PowerShell -----------------------------------------------------------> 
         <a 
           href="https://learn.microsofrt.com/en-us/powershell/"
         >
@@ -270,7 +272,7 @@
           >
         </a>
 
-        <!--C -->
+        <!--C -------------------------------------------------------------------->
         <a 
           href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf"
         > 
@@ -280,7 +282,7 @@
           >
         </a>
 
-        <!--C++ -->
+        <!--C++ ------------------------------------------------------------------>
         <a
           href="https://isocpp.org/std/the-standard"
         >
@@ -290,7 +292,7 @@
           >
         </a>
 
-        <!--C# -->
+        <!--C# ------------------------------------------------------------------->
         <a
           href="https://learn.microsoft.com/en-us/dotnet/csharp/"
         > 
@@ -301,7 +303,7 @@
           >
         </a>
 
-        <!--Java -->
+        <!--Java ----------------------------------------------------------------->
         <a 
           class="shorter"
           href="https://www.java.com/en/"
@@ -313,7 +315,7 @@
           >
         </a>
 
-        <!--Rust -->
+        <!--Rust ----------------------------------------------------------------->
         <a
           href="https://www.rust-lang.org"
         >
@@ -324,7 +326,7 @@
           >
         </a>
 
-        <!--Python -->
+        <!--Python --------------------------------------------------------------->
         <a
           class="longer"
           href="https://www.python.org"
@@ -335,7 +337,7 @@
           >
         </a>
 
-        <!--HTML5 -->
+        <!--HTML5 ---------------------------------------------------------------->
         <a
           href="https://html.spec.whatwg.org/multipage/"
         >
@@ -346,7 +348,7 @@
           >
         </a>
 
-        <!--CSS3 -->
+        <!--CSS3 ----------------------------------------------------------------->
         <a
           href="https://www.w3.org/Style/CSS/Overview.en.html"
         >
@@ -357,7 +359,7 @@
           >
         </a>
 
-        <!--JavaScript -->
+        <!--JavaScript ----------------------------------------------------------->
         <a
           href="https://www.javascript.com"
         >
@@ -368,7 +370,7 @@
           > 
         </a>
 
-        <!--Git -->
+        <!--Git ------------------------------------------------------------------>
         <a 
           class="longer"
           href="https://git-scm.com"
@@ -380,7 +382,7 @@
           >
         </a>
 
-        <!--Github -->
+        <!--Github --------------------------------------------------------------->
         <a
           href="https://github.com"
         >
@@ -392,13 +394,8 @@
         </a>
       </div>
 
-      <!--Programming Languages Lists - - - - - - - - - - - - - - - - - - - -->
       <div class="centre-width" id="projects-list">
-        <h2>My Programming Languages </h2>
-
-        <hr>
-
-        <!--Unordered List-->
+        <h2>My Programming Languages <hr/></h2>
         <div class="left-column hidden">
           <ul>  
             <li>BASh</li>
@@ -416,13 +413,8 @@
             <li>Github</li>
           </ul>
         </div>
-
-        <!--Detailed List-->
         <div class="right-column hidden">
-          <h3>Favourites</h3>
-          
-          <hr>
-
+          <p>Favourites</p><hr/>
           <dl>
             <dt>BASh</dt>
             <dd>
@@ -432,46 +424,65 @@
               code and make the necessary arrangements to support my files.
             </dd>
 
-            <dt>C</dt>
-            <dd>
-              Perhpas my favourite programming languages, not because of how
-              awkard it is to debug at time and write code in, but because of 
-              how specific it is, allowing the programmer to fine tune and 
-              adjust their programs to the exact specific needs, I believe 
-              what many people see as C's drawbacks, only comes from it's 
-              advantages.
-            </dd>
+          <dt>C</dt>
+          <dd>
+            Perhpas my favourite programming languages, not because of how
+            awkard it is to debug at time and write code in, but because of 
+            how specific it is, allowing the programmer to fine tune and 
+            adjust their programs to the exact specific needs, I believe 
+            what many people see as C's drawbacks, only comes from it's 
+            advantages.
+          </dd>
 
-            <dt>C++</dt>
-            <dd>
-              The younger brother of C, developing the object oriented elements
-              of C, breaking of the yoke of procedural and straight into a 
-              different paradigm. Whilst still maintaining many of the advantages
-              of C, it gives a programmer greater complexity to work with to form
-              form advanced solutions for different fields.
-            </dd>
+          <dt>C++</dt>
+          <dd>
+            The younger brother of C, developing the object oriented elements
+            of C, breaking of the yoke of procedural and straight into a 
+            different paradigm. Whilst still maintaining many of the advantages
+            of C, it gives a programmer greater complexity to work with to form
+            form advanced solutions for different fields.
+          </dd>
 
-            <dt>Java</dt>
-            <dd>
-              Whilst many are starting to question Java's place as a dominant 
-              languages, it still forms the backbone of most of the object 
-              oriented paradigm, and has helped produce universal programs that
-              work on many systems, and any language that may take it's crown, 
-              will have to inheret many of it's customs and way before fully
-              being able to take it's spot.
-            </dd>
-          </dl>
+          <dt>C#</dt>
+          <dd>
+            Thanks to Microsoft's brazen bringing on of C# to their NET 
+            framework, C# has increasingly seen more and more use, especially
+            in the gaming world. Whilst essentailly being Microsoft's new 
+            Java, C# still forms a great solution to bridge the gap between
+            network and system. 
+          </dd>
+
+          <dt>Java</dt>
+          <dd>
+            Whilst many are starting to question Java's place as a dominant 
+            languages, it still forms the backbone of most of the object 
+            oriented paradigm, and has helped produce universal programs that
+            work on many systems, and any language that may take it's crown, 
+            will have to inheret many of it's customs and way before fully
+            being able to take it's spot.
+          </dd>
+
+          <dt>Python</dt>
+          <dd>
+            Probably the most popular programming languages, python serves as 
+            a great language to learn and test programs in. Whilst those who 
+            don't understand it's power might mistake it for a genuine take
+            all language, python still allows those relatively new to 
+            programming to learn concepts and manipulate large data sets, 
+            as wekk as being an easy language to throw together a model
+            solution.
+          </dd>
         </div>
       </div>  
     </main>
 
 <!--Footer Section ============================================================
- !    Marks the end of the webpage, as well as containing helpful links 
- !    and the copyright
+!    Marks the end of the webpage, as well as containing helpful links 
+!    and the copyright
 ============================================================================-->
     <footer>
 
-<!--Copyright Section -->
+<!--Copyright Section -------------------------------------------------------->
       <div class="copyright">
 
         <!--To Top Button-->
@@ -485,72 +496,61 @@
       <!--Seperator for Map-->
       <div class="seperator"></div>
 
-<!--Website Map 
+<!--Website Map ---------------------------------------------------------------
   !    Gives the user a "no-nonsense" view of the webpage, almost like a
   !    file directory, to provide a transparent means of navigation once
   !    a user has already arrived at the bottem of the page.
-  !-->   
+------------------------------------------------------------------------------>   
       <div class="map">
         <ul class="map">
           <li> <!--Map Root, Homepage-->
             <a href="../homepage.html">Homepage</a>
           </li>
 
-          <!--Map Branch : Credentials Branch -->
-          <li>
+<!--Map Branch : Credentials Branch ------------------------------------------>
+          <ul>
+            <li>
+              <a href="../credentials/home.html">Credentials - Home</a>
+            </li>
+
+              <hr/> <!--Map Leaves, Credentials-->
+
             <ul>
-              <li>
-                <a href="../credentials/home.html">Credentials - Home</a>
-              </li>
-
-              <li><hr></li> <!--Map Leaves, Credentials-->
-
-              <li>
-                <ul>
-                  <li><a href="../../docs/curiculumvitae.pdf">CV</a></li>
-                  <li><a href="../../docs/standin-cover-letter.pdf">Cover Letter</a></li>
-                </ul>
-              </li>
+              <li><a href="../../docs/curiculumvitae.pdf">CV</a></li>
+              <li><a href="../../docs/standin-cover-letter.pdf">Cover Letter</a></li>
             </ul>
-          </li>
+          </ul>
 
-          <!--Map Branch : Projects Branch -->
-          <li>
-            <ul>
-              <li>
-                <a href="../projects/home.html">Projects - Home</a>
-              </li>
+<!--Map Branch : Projects Branch --------------------------------------------->
+          <ul>
+            <li>
+              <a href="../projects/home.html">Projects - Home</a>
+            </li>
 
-              <li><hr></li>
+            <hr/>
 
-              <li>
-                <ul> <!--Map Leaves, Projects-->
-                  <li><a href="../projects/projects-portfolio.html">Portfolio</a></li>
-                </ul>
-              </li>
+            <ul> <!--Map Leaves, Projects-->
+              <li><a href="../projects/projects-portfolio.html">Portfolio</a></li>
             </ul>
-          </li>
+          </ul>
 
-          <!--Map Branch : Personal Branch -->
-          <li>
-            <ul>
-              <li>
-                <a href="../personal/home.html">Personal - Home</a>
-              </li>
+<!--Map Branch : Personal Branch --------------------------------------------->
+          <ul>
+            <li>
+              <a href="../personal/home.html">Personal - Home</a>
+            </li>
 
-              <li><hr></li>
+            <hr/>
 
-              <li>
-                <ul> <!--Map Leaves, Personal-->
-                  <li><a href="../personal/blog.html">Blog</a></li>
-                  <li><a href="../personal/hobbies.html">Hobbies</a></li>
-                  <li><a href="../personal/holidays.html">Holidays</a></li>
-                </ul>
-              </li>
+            <ul> <!--Map Leaves, Personal-->
+              <li><a href="../personal/blog.html">Blog</a></li>
+              <li><a href="../personal/hobbies.html">Hobbies</a></li>
+              <li><a href="../personal/holidays.html">Holidays</a></li>
             </ul>
-          </li>
+          </ul>
         </ul>
       </div>
     </footer>
+  
   </body>
 </html>

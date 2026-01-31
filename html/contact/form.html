@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <!--===========================================================================
- ! Contact Form ~
- !    A webpage that allows the user to submit their details for me to 
- !    contact them.
+ ! Website Template ~
+ !    This is the description for the template webpage
  ! Author(s): Alexander Del Brocco
+ ! Started  : 16th of January 2024
 ============================================================================-->
 
 <html lang="en">
 <!--Header Section ============================================================
  !    Section that contains most of the meta data for the website.
 ============================================================================-->
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AJDB:C - Contact Form</title>
-  <meta name="author" content="Alexander del Brocco">
-  <meta name="description" content="Welcome to the AJDB:C, I am a Computer Science student at the University of Leeds">
-  <meta name="keywords" content="">
-  <link rel="stylesheet" href="../../css/style.css">
-  <link rel="stylesheet" href="../../css/bootstrap/node_modules/bootstrap/scss/bootstrap.css">
-  <script defer src="../../js/fadeIn.js"></script>
-</head>
+  <head>
+    <title>AJDB:C - Contact Form</title>
+    <link rel="shortcut icon" href="../../img/general/home-fav.ico" type="image/x-icon" 
+      alt="credit: https://www.flaticon.com/free-icons/study" />
+    <meta author="Alexander del Brocco"
+    description="Welcome to the AJDB:C Homepage, I am a Computer Science
+    student at the universiry of Leeds " 
+    keywords="" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="" href="../../js/"/>
+  </head>
 
 <!--Body Section ==============================================================
  !    Section that contains the actual viewable content of the website.
@@ -36,14 +37,14 @@
         <div class="nav-bar">
           <div class="nav-branch" id="nav-root-branch"> <!--Home Nav Button-->
             <div class="nav-branch-root" id="nav-home">
-              <a class="nav-root" href="../homepage.html">
+              <a class="nav-root" id="nav-home" href="../homepage.html">
                 HOME
               </a>
             </div>
           </div>
         </div>
 
-        <!--Website Branches Side of Nav Bar -->
+        <!--Website Branches Side of Nav Bar ----------------------------------->
 
         <!--Credentials - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <div class="nav-branches">
@@ -91,7 +92,7 @@
             </div>
           </div>
 
-          <!--Personal - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+          <!--Personal - - - - - - - - - - - - - - - - - - - - - - - - - - - --->
           <div class="nav-branch">
             <div class="nav-branch-root">
               <a class="nav-root" href="../personal/home.html">
@@ -159,15 +160,13 @@
       <div class="centre-width" id="contact-form">
         <div class="contents">
 
-          <!--Text Introduction 
+          <!--Text Introduction -------------------------------------------------
           !    Text to introduce the page and remind the user where they are.
-          !-->
+          ---------------------------------------------------------------------->
           <div class="text-box">
 
             <!--Heading-->
-            <h1>Contact Form</h1>
-
-            <hr>
+            <h1>Contact Form<hr/></h1>
 
             <!--Introduction-->
             <p>
@@ -176,26 +175,24 @@
               in contact, and you're interest in contacting me.
             </p>
 
-            <br>
+            <br/>
 
           </div>
 
-          <!--HTML Form 
+          <!--HTML Form ---------------------------------------------------------
           !    A HTML form integrated with JavaScript to allow the viewer to
           !    leave me their details along with their note of interest for me
           !    to give them an alternative to contacting me, by letting me 
           !    contact them, but also to avoid data harvesting.
-          !-->
+          ---------------------------------------------------------------------->
 
-          <!--Secondry Heading to Distinguish the Form - - - - - - - - - - - -->
-          <h2>Your Details </h2>
+          <!--Secondry Heading to Distinguish the Form - - - - - - - - - - - --->
+          <h2>Your Details <hr/></h2>
 
-          <hr>
-
-          <!--HTML Form -->
+          <!--HTML Form -------------------------------------------------------->
           <form action="status.html">
             <div class="left-column">
-              <!--Form : Full Name - - - - - - - - - - - - - - - - - - - - - - -->
+              <!--Form : Full Name - - - - - - - - - - - - - - - - - - - - - - --->
               <div class="contact-form-name">
 
                 <!--Title-->
@@ -213,116 +210,94 @@
                 <!--Full Name-->
                 <div>
                   <label for="first-name">First Name</label>
-                  <input
-                    name="first-name"
-                    id="first-name"
-                    type="text"
-                    maxlength="15"
-                    required
-                  >
+                  <input name="first-name" id="first-name" type="text" min="1" max="15" required>
                 </div>
 
                 <div>
                   <label for="last-name">Last Name</label>
-                  <input 
-                    name="last-name"
-                    id="last-name"
-                    type="text"
-                    maxlength="15"
-                    required
-                  >
+                  <input name="last-name" id="last-name" type="text" min="1" max="15" required>
                 </div>
 
               </div>
 
-              <hr>
+              <hr/>
 
-              <!--Form : Contact Details - - - - - - - - - - - - - - - - - - - -->
+              <!--Form : Contact Details - - - - - - - - - - - - - - - - - - - --->
               <div class="contact-form-details">
 
                 <!--Email-->
                 <div>
-                  <label for="email-address">Email</label>
-                  <input 
-                    name="email-address"
-                    id="email-address"
-                    type="email"
-                    maxlength="40"
-                    placeholder="username@email.co.uk"
-                    required
-                  >
+                  <label for="email">Email</label>
+                  <input name="email" id="email" type="email" max="40" placeholder="username@email.co.uk" required>
                 </div>
 
                 <!--Telephone-->
                 <div>
-                  <label for="tel-number">Telephone</label>
-                  <input
-                    name="tel-number"
-                    id="tel-number"
-                    maxlength="11"
-                    placeholder="0#### ######"
-                  >
+                  <label for="telephone">Telephone</label>
+                  <input name="telephone" id="tel" min="11" max="11" placeholder="0#### ######">
                 </div>
 
                 <!--Prefered Mode of Contact-->
                 <div class="mo-contact">
-                  <label>Prefered Contact</label>
-                  <label for="email">Email</label>
-                  <input name="email" id="email" type="radio" value="email">
-                  <label for="tel">Tel.</label>
-                  <input name="tel" id="tel" type="radio" value="telephone">
+                  <label for="mo-contact">Prefered Contact</label>
+                  <label for="Email">Email</label>
+                  <input name="mo-contact" id="mo-contact" type="radio" value="email">
+                  <label for="Tel.">Tel.</label>
+                  <input name="mo-contact" id="mo-contact" type="radio" value="telephone">
                 </div>
 
               </div>
 
-              <hr>
+              <hr/>
 
               <!--Description of Interest Text-->
               <div class="contact-form-interest">
                 <div>
-                  <label for="interest-input">Description of Interest</label>
+                  <label for="interest">Description of Interest</label>
                   <textarea
-                    name="interest-input" 
-                    id="interest-input"
+                    name="interest" 
                     maxlength="500" 
                     placeholder="Express your interest in contacting me here!
                     "></textarea>
                 </div>
+
+                <!--Submission Date-->
+                <input type="hidden" name="submission-date" value="<?=$date?>">
               </div>
 
-              <br>
+              <br/>
 
               <!--Submission and Reset Buttons-->
               <div class="button-box">
 
-                <a class="button" id="contact-button">Submit</a>
+                <button class="styled" id="contact-button" type="button">
+                  <a>Submit</a>
+                </button>
+
+                <button class="styled" type="reset">
+                  <a>Reset</a>
+                </button>
 
               </div>
           </div>
 
-          <!--Right Column Skeleton for JavaScript-->
-
           <div class="right-column">
-            <h3>Confirm Details</h3>
-            
-            <hr>
-
+            <h3>Confirm Details</h3><hr/>
             <p id="name">Your Details will appear here once you enter them.</p>
             
-            <br>
+            <br/>
 
             <p id="contact"></p>
 
-            <br>
+            <br/>
 
             <p id="interest"></p>
 
-            <hr>
+            <hr/>
 
-            <!--Real Submit Button, Hidden until user enters correct details-->
-            <a class="button" id="submit-button" href="status.html">
-              Sumbit Confirmed Details
-            </a>
+            <button class="styled" id="submit-button" type="submit">
+              <a>Sumbit Confirmed Details</a>
+            </button>
           </div>
 
           <script src="../../js/form.js"></script>
@@ -334,18 +309,14 @@
             </small>
           </h2>
           
-          <hr>
+          <hr/>
 
-          <!--Disclaimer-->
           <p>
             <small>
               Your personal details will be stored locally on the website until
               the session is terminated, by then you should recieve an email
               confirming your details, in which will be explained that your
               details will be kept by me until our correspondence is over.
-              Once you have entered your details the submit button will appear,
-              however if it does not, one or more of your details does not 
-              meet the criteria for the field it has been entered in.
             </small>
           </p>
         
@@ -353,90 +324,79 @@
 
       </div>
     </main>
-<!--Footer Section ============================================================
- !    Marks the end of the webpage, as well as containing helpful links 
- !    and the copyright
-============================================================================-->
+    <!--Footer Section ========================================================
+     !    Marks the end of the webpage, as well as containing helpful links 
+     !    and the copyright
+    ========================================================================-->
     <footer>
 
-<!--Copyright Section -->
+      <!--Copyright Section -------------------------------------------------->
       <div class="copyright">
 
         <!--To Top Button-->
-        <a href="#" id="to-top">Back to Top of Page</a>
+        <a href="#" id="to-top">
+          Back to Top of Page
+        </a>
+
         <script src="../../js/toTop.js"></script>
 
         <!--Generic Copryright for Creative Content-->
-        <small>&copy; 2024 Alexander Del Brocco</small>
+        <small>
+          &copy; 2024 Alexander Del Brocco
+        </small>
       </div>
 
       <!--Seperator for Map-->
       <div class="seperator"></div>
 
-<!--Website Map 
-  !    Gives the user a "no-nonsense" view of the webpage, almost like a
-  !    file directory, to provide a transparent means of navigation once
-  !    a user has already arrived at the bottem of the page.
-  !-->   
+      <!--Website Map ---------------------------------------------------------
+       !    Gives the user a "no-nonsense" view of the webpage, almost like a
+       !    file directory, to provide a transparent means of navigation once
+       !    a user has already arrived at the bottem of the page.
+      ------------------------------------------------------------------------>   
       <div class="map">
         <ul class="map">
           <li> <!--Map Root, Homepage-->
             <a href="../homepage.html">Homepage</a>
           </li>
+          <ul>
+            <li> <!--Map Branch, Credentials Branch -------------------------->
+              <a href="../credentials/home.html">Credentials - Home</a>
+            </li>
 
-          <!--Map Branch : Credentials Branch -->
-          <li>
+            <hr/> <!--Map Leaves, Credentials-->
+
             <ul>
-              <li>
-                <a href="../credentials/home.html">Credentials - Home</a>
-              </li>
-
-              <li><hr></li> <!--Map Leaves, Credentials-->
-
-              <li>
-                <ul>
-                  <li><a href="../../docs/curiculumvitae.pdf">CV</a></li>
-                  <li><a href="../../docs/standin-cover-letter.pdf">Cover Letter</a></li>
-                </ul>
-              </li>
+              <li><a href="../../docs/curiculumvitae.pdf">CV</a></li>
+              <li><a href="../../docs/standin-cover-letter.pdf">Cover Letter</a></li>
             </ul>
-          </li>
+          </ul>
 
-          <!--Map Branch : Projects Branch -->
-          <li>
-            <ul>
-              <li>
-                <a href="../projects/home.html">Projects - Home</a>
-              </li>
+          <ul>
+            <li> <!--Map Branch, Projects Branch ----------------------------->
+              <a href="../projects/home.html">Projects - Home</a>
+            </li>
 
-              <li><hr></li>
+            <hr/>
 
-              <li>
-                <ul> <!--Map Leaves, Projects-->
-                  <li><a href="../projects/projects-portfolio.html">Portfolio</a></li>
-                </ul>
-              </li>
+            <ul> <!--Map Leaves, Projects-->
+              <li><a href="../projects/projects-portfolio.html">Portfolio</a></li>
             </ul>
-          </li>
+          </ul>
 
-          <!--Map Branch : Personal Branch -->
-          <li>
-            <ul>
-              <li>
-                <a href="../personal/home.html">Personal - Home</a>
-              </li>
+          <ul>
+            <li> <!--Map Branch, Personal Branch ----------------------------->
+              <a href="../personal/home.html">Personal - Home</a>
+            </li>
 
-              <li><hr></li>
+            <hr/>
 
-              <li>
-                <ul> <!--Map Leaves, Personal-->
-                  <li><a href="../personal/blog.html">Blog</a></li>
-                  <li><a href="../personal/hobbies.html">Hobbies</a></li>
-                  <li><a href="../personal/holidays.html">Holidays</a></li>
-                </ul>
-              </li>
+            <ul> <!--Map Leaves, Personal-->
+              <li><a href="../personal/blog.html">Blog</a></li>
+              <li><a href="../personal/hobbies.html">Hobbies</a></li>
+              <li><a href="../personal/holidays.html">Holidays</a></li>
             </ul>
-          </li>
+          </ul>
         </ul>
       </div>
     </footer>
