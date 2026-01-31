@@ -4,47 +4,36 @@
  *    also working with JavaScript for increased dynamic content to the page
  * 
  * Author(s): Alexander Del Brocco                                               
+ * Started  : 30th of January, 2024
 =============================================================================*/
 
-/* Sitewide Master Properties -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
- *
+/* Sitewide Properties -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ *  ~ Properties applied throughout the site
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
-/* Sitewide : General ---------------------------------------------------------
- *
------------------------------------------------------------------------------*/
+/* General HTML -------------------------------------------------------------*/
 
 * {
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html {
-  background-color: #2f2f2f;;
+  background-color: #070d0e;
   font-size: calc((1vh + 1vw)*.4); /*Sets value for other element's reference*/
   height: 100vh; /*Deduced size from viewport*/
   width: 99.5vw; /*Not 100 from scroll bar*/
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-body {
-  font-size: 1rem;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+header {
+  background-color: #070d0e;
 }
-
-main {
-  height: 100%;
-  background-color: #2F2F2F;
-}
-
-/* Sitewide : General : Footer - - - - - - - - - - - - - - - - - - - - - - - */
 
 footer {
   height: 15%;
-  background-color: #3F3F3F;
+  background-color: #070d0e;
   color: #DDDDDD;
   padding: 2% 10%;
   display: flex;
@@ -59,7 +48,6 @@ footer a {
   text-decoration: underline;
 }
 
-/*Division contains copyright handle and to-top button*/
 footer div.copyright {
   display: flex;
   flex-direction: column;
@@ -69,17 +57,15 @@ footer div.copyright {
 }
 
 footer div {
-  background-color: #3f3f3f;
+  background-color: #070d0e;
 }
 
-/*A vertical line that seperates content*/
 footer div.seperator {
   border-left: 1px solid #DDDDDD;
   height: 80%;
   width: 1%;
 }
 
-/*Map of the website at the bottom of page*/
 footer div.map {
   width: 70%;
   margin: 0%;
@@ -94,21 +80,77 @@ footer div.map ul.map  {
   padding-left: 0%;
 }
 
-footer div.map ul.map li {
-  width: 30%;
+footer div.map ul.map ul {
+  width: 25%;
   list-style: none;
   padding-left: 0%;
 }
 
-footer div.map ul.map li ul li {
+footer div.map ul.map ul ul li {
   padding: 0%;
-  width: 80%;
 }
 
-/* Sitewide : General :  Lower Level - - - - - - - - - - - - - - - - - - - - */
+body {
+  font-size: 1rem;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: #04010A;
+}
+
+main.homepage {
+  height: 190%;
+  width: 100%;
+}
+
+main.credentials-home {
+  height: 170%;
+}
+
+main.projects-home {
+  height: 150%;
+}
+
+main.projects-portfolio {
+  height: 100%;
+}
+
+main.personal-home {
+  height: 250%;
+}
+
+main.personal-blog {
+  height: 200%;
+}
+
+main.contact-home {
+  height: 40%;
+}
+
+main.contact-form {
+  height: 100%;
+}
+
+main.contact-status {
+  height: 30%;
+}
 
 div {
   background-color: #DDDDDD;
+}
+
+div.intro-bar {
+  background-color: #EEEEEE;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  width: 100%;
 }
 
 h1 {
@@ -124,12 +166,17 @@ hr {
 }
 
 p {
-  color: #2f2f2f;
+  color: #DDDDDD;
   font-family: Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
   margin: 0%;
   text-align: left;
   text-decoration: none;
+}
+
+p.intro-bar {
+  font-size: 2rem;
+  width: 95%;
 }
 
 img {
@@ -142,160 +189,9 @@ a {
   text-decoration: none;
 }
 
-ul {
-  padding: 0%;
-}
+/* Navigation Bar -----------------------------------------------------------*/
 
-/*Figures only come into use in blog sections*/
-figure {
-  font-size: 1rem;
-}
-
-/*Captions will appear above content in boxes*/
-figure figcaption {
-  color: #FFFFFF;
-  background-color: #2F2F2F;
-  position: absolute;
-  z-index: 1;
-  border-radius: 5%/20%;
-}
-
-/*Box will move to left or right when hovered*/
-div.lean-left {
-  left: 0px;
-  position: relative;
-  transition: ease .4s;
-} div.lean-left:hover {
-  left: -10px;
-}
-
-div.lean-right {
-  right: 0px;
-  position: relative;
-  transition: ease .4s;
-} div.lean-right:hover {
-  animation: sectionLeanLeft .2s; 
-  right: -10px;
-}
-
-/*Pre bootstrap general class sizes*/
-.full-width {
-  width: 100%;
-  display: flex;
-}
-
-.centre-width {
-  width: 80%;
-  margin: 0% 10%;
-  display: flex;
-}
-
-.left-column {
-  height: 100%;
-  float: left;
-  width: 50%;
-}
-
-.right-column {
-  height: 100%;
-  float: right;
-  width: 50%;
-}
-
-#in-row {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-}
-
-/*Classes for JavaScript fly-in animations*/
-.hidden {
-  opacity: 0;
-  transform: translateX(-100%) ;
-  filter: blur(2px);
-  transition: all .5s;
-}
-
-/*These animations are optional*/
-@media(prefers-reduced-motion) {
-  .hidden {
-    transition: none;
-  }
-}
-
-.show {
-  opacity: 1;
-  transform: translateX(0);
-  filter: blur(0px);
-}
-
-/*Delay fly-in animations if there are multiple*/
-.hidden:nth-child(2) {
-  transition-delay: 200ms;
-}
-
-.hidden:nth-child(3) {
-  transition-delay: 250ms;
-}
-
-.hidden:nth-child(4) {
-  transition-delay: 300ms;
-}
-
-/*Most images should fill the container they are in*/
-img.in-container {
-  width: 100%;
-  height: 100%;
-}
-
-p.in-container {
-  width: 100%;
-  height: 100%;
-}
-
-/*Sitewide button styling*/
-a.button {
-  background-color: #284854;
-  box-sizing: border-box;
-  border-radius: 12%/50%;
-  border: 1px #DDDDDD solid;
-  float: left;
-  margin: 0% 1.25%;
-  padding: 0.4% 2%;
-  transition: ease .2s;
-  color: #FFFFFF;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-decoration: none;
-  position: relative;
-  top: 0px;
-  font-size: 1.5rem;
-  transition: ease .2s;
-} a.button:hover {
-  background-color: #EEEEEE;
-  border-color: #284854;
-  border-radius: 10%/40%;
-  color: #284854;
-  text-decoration: underline;
-  top: -2px;
-}
-
-/*Orange Buttons reserved for contact related content*/
-#contact-button {
-  animation: contactFizzOut .4s;
-  background-color: #D9A774;
-  color: #2f2f2f;
-} #contact-button:hover {
-  background-color: #60747C;
-  border-color: #284854;
-  border-radius: 10%/40%;
-  color: #FFFFFF;
-}
-
-/* Sitewide : Navigation ------------------------------------------------------
- *
------------------------------------------------------------------------------*/
-
-/* Sitewide :  Navigation : General - - - - - - - - - - - - - - - - - - - - -*/
+/* Navigation Bar Attributes - - - - - - - - - - - - - - - - - - - - - - - - */
 
 header {
   width: 100%;
@@ -323,7 +219,7 @@ div.nav-bar {
   float: left;
 }
 
-/* Sitewide :  Navigation : Root - - - - - - - - - - - - - - - - - - - - - - */
+/* Navigation Root Section Attributes - - - - - - - - - - - - - - - - - - - -*/
 
 #nav-root-branch {
   margin-right: 60%;
@@ -344,7 +240,7 @@ div.nav-bar {
   height: 100%;
 }
 
-/* Sitewide :  Navigation : Branches - - - - - - - - - - - - - - - - - - - - */
+/* Navigation Branches Section Attributes - - - - - - - - - - - - - - - - - -*/
 
 div.nav-branches {
   background-color: transparent;
@@ -367,7 +263,7 @@ div.nav-branch {
   width: 31%;
 }
 
-/* Sitewide : Navigation : Branches : Branch Root Attributes (Head Tab) */
+/* Navigation - Branch Root Attributes (Head Tab) */
 
 div.nav-branch-root {
   width: 100%;
@@ -377,7 +273,6 @@ div.nav-branch-root {
   justify-content: center;
 }
 
-/*Navigation Menu Animations*/
 a.nav-root {
   animation: navFizzOut .2s;
   background-color: #284854;
@@ -403,7 +298,7 @@ a.nav-root {
   color: #FFFFFF;
 }
 
-/* Sitewide : Navigation : Branches : Branch Leaves Attributes (Dropdown) */
+/* Navigation - Branch Leaves Attributes (Dropdown Menu) */
 
 div.nav-branch-leaves {
   box-sizing: border-box;
@@ -433,7 +328,6 @@ div.nav-branch-leaves li{
   justify-content: stretch;
 }
 
-/*Navigation Dropdown*/
 a.nav-leaf {
   padding: 0% 10%;
   width: 100%;
@@ -447,47 +341,148 @@ a.nav-leaf {
   padding: 0% 5% 0% 15%;
 }
 
-/* Homepage Element Properties -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- *
+/* Personal Branch Properties -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ *  ~ Properties applied exclusively to the Personal branch of the website
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
-main.homepage {
-  height: 250%;
+/* Personal Home Page -------------------------------------------------------*/
+
+#lean-left {
+  left: 0px;
+  position: relative;
+  transition: ease .4s;
+} #lean-left:hover {
+  left: -10px;
 }
 
-/* Homepage : Gallery - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+#lean-right {
+  right: 0px;
+  position: relative;
+  transition: ease .4s;
+} #lean-right:hover {
+  animation: sectionLeanLeft .2s; 
+  right: -10px;
+}
+
+.full-width {
+  width: 100%;
+  display: flex;
+}
+
+.centre-width {
+  width: 80%;
+  margin: 0% 10%;
+  display: flex;
+}
+
+.left-column {
+  height: 100%;
+  float: left;
+  width: 50%;
+  background-color: #070d0e;
+}
+
+.right-column {
+  height: 100%;
+  float: right;
+  width: 50%;
+  background-color: #070d0e;
+}
+
+img.in-container {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p.in-container {
+  width: 100%;
+  height: 100%;
+}
+
+button.styled {
+  background-color: #284854;
+  box-sizing: border-box;
+  border-radius: 4%/10%;
+  border: 1px #DDDDDD solid;
+  float: left;
+  margin: 0% 1.25%;
+  padding: 2% 2%;
+  transition: ease .2s;
+} button.styled a {
+  color: #FFFFFF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  position: relative;
+  top: 0px;
+  font-size: 1.5rem;
+  transition: ease .2s;
+} button.styled:hover {
+  background-color: #EEEEEE;
+  border-color: #284854;
+  border-radius: 10%/20%;
+  color: #284854;
+} button.styled:hover a {
+  color: #284854;
+  text-decoration: underline;
+  top: -1px;
+}
+
+#contact-button {
+  animation: contactFizzOut .4s;
+  background-color: #D9A774;
+} #contact-button a {
+  color: #2f2f2f;
+} #contact-button:hover {
+  background-color: #60747C;
+  border-color: #284854;
+  border-radius: 10%/40%;
+} #contact-button:hover a {
+  color: #FFFFFF;
+}
+
+/* Homepage Properties -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ *  ~ Properties applied exclusively to the Homepage of the website.
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+/* Homepage : Gallery ------------------------------------------------------ */
 
 #homepage-gallery {
   height: 34%;
+  position: relative;
 }
 
 #homepage-gallery h1 {
   filter: invert(1);
-  position:absolute;
+  position: absolute;
+  float: none;
   z-index: 8;
   font-size: 4rem;
   margin-left: 5%;
 }
 
-/* Homepage : Introduction - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Homepage : Introduction ------------------------------------------------- */
 
 #homepage-intro {
-  background-color: #EEEEEE;
+  background-color: #15272b;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   height: 8%;
+  border-top: 4px #070d0e double;
+  border-bottom: 4px #070d0e double;
 } #homepage-intro div {
-  background-color: #EEEEEE;
+  background-color: #15272b;
 }
 
-/* Homepage : Introduction : Image */
+/* Homepage : Introduction : Image - - - - - - - - - - - - - - - - - - - - - */
 
 #homepage-intro .profile-picture {
   height: 100%;
   width: auto;
 }
 
-/* Homepage : Introduction : Content */
+/* Homepage : Introduction : Content - - - - - - - - - - - - - - - - - - - - */
 
 #homepage-intro .contents {
   width: 80%;
@@ -500,55 +495,158 @@ main.homepage {
 }
 
 #homepage-intro .text-box {
-  height: 50%;
+  height: 100%;
   width: 100%;
+  padding: 2%;
+  align-items: center;
+  display: flex;
+}
+
+#homepage-intro p {
+  color: #AAAAAA;
+  font-size: 1.7em;
 }
 
 #homepage-intro .button-box {
   width: 100%;
   height: 40%;
-  align-items: center;
-  display: flex;
 }
 
-/* Homepage : Webpage Breakdown - - - - - - - - - - - - - - - - - - - - - - -*/
+/* Homepage : Webpage Breakdown -------------------------------------------- */
 
 #homepage-breakdown {
-  height: 58%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 30vh;
+  gap: 5vh;
+  background-color: #04010A;
+  padding: 5%;
+  max-height: 70%;
 }
 
 #homepage-breakdown .section {
-  height: 33.3%;
-  background-color: #2f2f2f;
+  grid-column: 1 / 13;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: #0e1a1c;
+  border-radius: 1% / 2%;
+  border: 1px #DDDDDD solid;
+  padding: 1%;
+    position: relative;
+  top: 0px;
+  transition: top ease 0.4s;
+} #homepage-breakdown .section:hover {
+  top: -10px;
 }
 
-/*Main Pictures and text section*/
+@media (max-width: 400px) {
+
+  main.homepage {
+    height: 240%;
+  }
+
+  #homepage-breakdown {
+    height: 100%;
+    grid-auto-rows: 40vh;
+  }
+  #homepage-breakdown .section {
+    grid-template-columns: 1fr; 
+    display: flex;  /* Change to flex for ordering */
+    flex-direction: column;
+  }
+  
+  .left-panel,
+  .right-panel,
+  .conv-left-panel,
+  .conv-right-panel {
+    grid-column: 1 / 13; 
+    width: 100%;
+  }
+  .conv-left-panel {
+    order: 2; 
+  }
+}
+
+.left-panel{
+  grid-column: 1 / 4;
+  background-color: #0e1a1c;
+}
+.right-panel{
+  grid-column: 4 / 13;
+  background-color: #0e1a1c;
+}
+
+.conv-left-panel{
+  grid-column: 1 / 10;
+  background-color: #0e1a1c;
+}
+
+.conv-right-panel{
+  grid-column: 10 / 13;
+  background-color: #0e1a1c;
+}
+
 #homepage-breakdown .contents {
+  width: 100%;
+  height: 100%;
+  border-radius: 1%/2%;
   box-sizing: border-box;
-  background-color: #DDDDDD;
+  background-color: #0e1a1c;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 5%;
-  height: 100%;
-  width: 100%;
+  padding: 2%;
   position: relative;
   top: 0px;
   transition: top ease 0.4s;
-} #homepage-breakdown .contents:hover {
-  top: -10px;
+}
+
+.h-box {
+  background-color: #0e1a1c;
+  border-top: 2px #DDDDDD solid;
+  border-bottom: 1px #DDDDDD solid;
+  padding: 2% 1%;
+  margin: 0 0 2% 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.h-box .left-column {
+  width: 80%;
+}
+
+.h-box .right-column {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#homepage-breakdown h2 {
+  font-size: 3em;
+  color: #DDDDDD;
+  margin: 0;
+  background-color: #0e1a1c;
+}
+
+#homepage-breakdown h3 {
+  color: #888888;
+  font-size: 1.5em;
+  margin: 0;
+  white-space: pre;
+  background-color: #0e1a1c;
 }
 
 #homepage-breakdown .text-box {
-  height: 50%;
+  height: 100%;
   width: 100%;
+  background-color: #0e1a1c;
 } #homepage-breakdown .text-box p {
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -558,23 +656,21 @@ main.homepage {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  background-color: #0e1a1c;
 } #homepage-breakdown .button-box a {
   font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10% 5%
 }
 
-/* Credentials Branch Properties -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- *
+/* Credential Branch Attributes -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ *  ~ Properties applied exclusively to the Credentials branch of the website
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
 /* Credentials : Home ---------------------------------------------------------
  *
------------------------------------------------------------------------------*/
+---------------------------------------------------------------------------- */
 
-main.credentials-home {
-  height: 170%;
-}
-
-/*Large Introduction Section*/
 #credentials-gallery {
   height: 40%;
   width: 100%;
@@ -618,8 +714,6 @@ main.credentials-home {
   justify-content: flex-start;
 }
 
-
-/*Lower more specific content*/
 #credentials-extra-curricular {
   height: 60%;
   box-sizing: border-box;
@@ -650,23 +744,14 @@ main.credentials-home {
   justify-content: flex-start;
 }
 
-/* Projects Branch Properties -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
- *
+/* Projects Branch Attributes -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ *  ~ Properties applied exclusively to the Projects branch of the website.
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
-/* Projects : Home ------------------------------------------------------------
- *
------------------------------------------------------------------------------*/
-
-main.projects-home {
-  height: 200%;
-}
-
-/*Top Text Section*/
 
 #projects-introduction {
   background-color: #FFFFFF;
-  height: 30%;
+  height: 40%;
 }
 
 #projects-introduction .contents {
@@ -697,7 +782,7 @@ main.projects-home {
   margin: 0%;
 }
 
-/* Logo band beneath text and image*/
+
 #projects-languages {
   background-color: #EEEEEE;
   box-sizing: border-box;
@@ -706,11 +791,10 @@ main.projects-home {
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 20%;
+  height: 25%;
   padding: 1%;
 }
 
-/*Logo Links and hover animations*/
 #projects-languages a {
   width: 8%;
   height: 40%;
@@ -722,7 +806,6 @@ main.projects-home {
   top: -10px;
 }
 
-/*Some logos are longer and shorter, and need different dimensions*/
 #projects-languages .longer {
   width: 15%
 }
@@ -731,9 +814,8 @@ main.projects-home {
   width: 6%;
 }
 
-/*List of programming languages and preference*/
 #projects-list {
-  height: 50%;
+  height: 35%;
   background-color: #DDDDDD;
   padding: 0% 1%;
   display: flex;
@@ -744,13 +826,7 @@ main.projects-home {
 
 #projects-list h2 {
   width: 100%;
-  height: 5%;
-  font-size: 2rem;
-}
-
-#projects-list h3 {
-  font-size: 2rem;
-  margin-top: 0%;
+  height: 10%;
 }
 
 #projects-list ul {
@@ -769,15 +845,7 @@ main.projects-home {
 
 #projects-list div {
   height: 80%;
-  font-size: 2rem;
-}
-
-/* Projects : Portfolio -------------------------------------------------------
- *
------------------------------------------------------------------------------*/
-
-main.projects-portfolio {
-  height: 100%;
+  font-size: .8rem;
 }
 
 main.projects-portfolio #title {
@@ -787,14 +855,13 @@ main.projects-portfolio #title {
 }
 
 main.projects-portfolio #table {
-  height: 70%;
+  height: 50%;
 }
 
 main.projects-portfolio table {
   width: 100%;
   height: 100%;
   padding: 0% 10%;
-  font-size: 2rem;
 }
 
 main.projects-portfolio table tr {
@@ -803,7 +870,7 @@ main.projects-portfolio table tr {
 }
 
 main.projects-portfolio table th, td{
-  padding: 0%;
+  padding: 0% 1%;
 }
 
 main.projects-portfolio #portfolio-table {
@@ -811,17 +878,9 @@ main.projects-portfolio #portfolio-table {
   background-color: #EEEEEE;
 }
 
-/* Personal Branch Properties -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
- *
+/* Personal Branch Attributes -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ *  ~ Properties applied exclusively to the Personal branch of the website.
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-
-/* Personal : Home ------------------------------------------------------------
- *
------------------------------------------------------------------------------*/
-
-main.personal-home {
-  height: 250%;
-}
 
 #personal-header h1 {
   width: 100%;
@@ -861,9 +920,10 @@ main.personal-home {
   font-size: 3.5rem;
 }
 
-a.personal-big-button {
+#personal-big-button {
   box-sizing: border-box;
   padding: 1% 5%;
+} #personal-big-button a {
   font-size: 2.5rem;
 }
 
@@ -877,104 +937,25 @@ a.personal-big-button {
   font-size: 2rem;
 }
 
-/* Personal : Blog ------------------------------------------------------------
- *
------------------------------------------------------------------------------*/
-
-/*All pages in personal section are similar, hence they share classes*/
-main.personal-pages {
-  height: 100%;
-}
-
-main.personal-pages figure {
-  height: 100%;
-  width: 20%;
-  margin: 0%;
-  position: relative;
-}
-
-main.personal-pages figure figcaption {
-  bottom: 0;
-  left: 0;
-  font-size: 2rem;
-}
-
-main.personal-pages section {
-  height: 20%;
-  background-color: #FFFFFF;
-  display: flex;
-  justify-content: flex-start;
-  padding: 0;
-  margin: 0%;
-  font-size: 2rem;
-}
-
-main.personal-pages div {
-  background-color: #FFFFFF;
-  padding: 1%;
-}
-
-main.personal-pages summary {
-  padding: 0% 2%;
-  list-style: none;
-}
-
-main.personal-pages article {
-  height: 80%;
-  background-color: #EEEEEE;
-  padding: 2%;
-}
-
-main.personal-pages article h2 {
-  font-size: 1.5rem;
-  text-decoration: underline;
-}
-
-/* Personal : Hobbies ---------------------------------------------------------
- *
------------------------------------------------------------------------------*/
-#hobbies {
- height: 80%; 
-}
-
-/* Personal : Holidays --------------------------------------------------------
- *
------------------------------------------------------------------------------*/
-
-#holidays {
-  height: 150%;
-}
-
-#holidays article div {
-  background-color: #EEEEEE;
-}
-
-#holidays section {
-  height: 15%;
-}
-
-#holidays article {
-  height: 85%;
-  padding: 0%;
-}
-
-#holidays aside figure {
+main.personal-blog aside figure {
   width: 100%;
   height: 33%;
   box-sizing: border-box;
 }
 
-/* Contact Branch Properties -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- *
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-
-/* Contact : Home -------------------------------------------------------------
- *
------------------------------------------------------------------------------*/
-
-main.contact-home {
-  height: 40%;
+figure {
+  font-size: 1rem;
 }
+
+figure figcaption {
+  filter: invert(1);
+  position:absolute;
+  z-index: 999;
+}
+
+/* Contact Branch Attributes -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ *  ~ Properties applied exclusively to the Contact branch of the website.
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
 #contact-information {
   height: 100%;
@@ -1030,14 +1011,6 @@ main.contact-home {
   padding-left: 4%;
 }
 
-/* Contact : Form -------------------------------------------------------------
- *
------------------------------------------------------------------------------*/
-
-main.contact-form {
-  height: 100%;
-}
-
 #contact-form {
   height: 100%;
 }
@@ -1064,6 +1037,7 @@ main.contact-form {
   height: 50%;
 }
 
+
 #contact-form form div {
   background-color: #EEEEEE;
   color: #5A5A5A;
@@ -1084,7 +1058,6 @@ main.contact-form {
   height: 100%;
 }
 
-/*HTML Form Input Styling*/
 #contact-form input, select, textarea{
   box-sizing: border-box;
   color: #5A5A5A;
@@ -1115,7 +1088,6 @@ main.contact-form {
   height: 30%;
 }
 
-/*Radio Button Specific Styling*/
 #contact-form form .contact-form-details .mo-contact {
   width: 100%;
   height: 30%;
@@ -1139,16 +1111,13 @@ main.contact-form {
   padding: 0% 5%;
 }
 
-#contact-form form .right-column #submit-button {
-  visibility: hidden;
+h3 {
+  margin: 0%;
+  font-size: 2rem;
 }
 
-/* Contact : Status -----------------------------------------------------------
- *
------------------------------------------------------------------------------*/
-
-main.contact-status {
-  height: 30%;
+#contact-form form .right-column #submit-button {
+  visibility: hidden;
 }
 
 #contact-status {
@@ -1174,3 +1143,69 @@ main.contact-status {
   justify-content: space-between;
   width: 20%;
 }
+
+main.personal-blog figure {
+  height: 100%;
+  width: 20%;
+  margin: 0%;
+}
+
+main.personal-blog section {
+  height: 10%;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0%;
+}
+
+main.personal-blog article {
+  height: 40%;
+  background-color: #EEEEEE;
+}
+
+#in-row {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.hidden-left {
+  opacity: 0;
+  transform: translateX(-100%) ;
+  filter: blur(2px);
+  transition: all .7s;
+}
+
+.hidden-right {
+  opacity: 0;
+  transform: translateX(100%) ;
+  filter: blur(2px);
+  transition: all .7s;
+}
+
+@media(prefers-reduced-motion) {
+  .hidden-left .hidden-right {
+    transition: none;
+  }
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0px);
+}
+
+.hidden:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.hidden:nth-child(3) {
+  transition-delay: 250ms;
+}
+
+.hidden:nth-child(4) {
+  transition-delay: 300ms;
+}
+
+
