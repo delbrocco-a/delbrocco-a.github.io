@@ -18,8 +18,13 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+:root {
+  --site-black: #0c0908;
+  --site-teal: #008080;
+}
+
 html {
-  background-color: #070d0e;
+  background-color: var(--site-black);
   font-size: calc((1vh + 1vw)*.4); /*Sets value for other element's reference*/
   height: 100vh; /*Deduced size from viewport*/
   width: 99.5vw; /*Not 100 from scroll bar*/
@@ -28,12 +33,12 @@ html {
 }
 
 header {
-  background-color: #070d0e;
+  background-color: var(--site-black);
 }
 
 footer {
   height: 15%;
-  background-color: #070d0e;
+  background-color: var(--site-black);
   color: #DDDDDD;
   padding: 2% 10%;
   display: flex;
@@ -57,7 +62,7 @@ footer div.copyright {
 }
 
 footer div {
-  background-color: #070d0e;
+  background-color: var(--site-black);
 }
 
 footer div.seperator {
@@ -102,7 +107,7 @@ body {
 main {
   height: 100%;
   width: 100%;
-  background-color: #04010A;
+  background-color: var(--site-black);
 }
 
 main.homepage {
@@ -379,14 +384,14 @@ a.nav-leaf {
   height: 100%;
   float: left;
   width: 50%;
-  background-color: #070d0e;
+  background-color: var(--site-black);
 }
 
 .right-column {
   height: 100%;
   float: right;
   width: 50%;
-  background-color: #070d0e;
+  background-color: var(--site-black);
 }
 
 img.in-container {
@@ -401,16 +406,16 @@ p.in-container {
 }
 
 button.styled {
-  background-color: #284854;
+  background-color: var(--site-teal);
   box-sizing: border-box;
   border-radius: 4%/10%;
-  border: 1px #DDDDDD solid;
+  border: 0px #DDDDDD solid;
   float: left;
   margin: 0% 1.25%;
   padding: 2% 2%;
   transition: ease .2s;
 } button.styled a {
-  color: #FFFFFF;
+  color: #DDDDDD;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
   position: relative;
@@ -420,7 +425,7 @@ button.styled {
 } button.styled:hover {
   background-color: #EEEEEE;
   border-color: #284854;
-  border-radius: 10%/20%;
+  border-radius: 1%/2%;
   color: #284854;
 } button.styled:hover a {
   color: #284854;
@@ -464,15 +469,14 @@ button.styled {
 /* Homepage : Introduction ------------------------------------------------- */
 
 #homepage-intro {
-  background-color: #15272b;
+  background-color: var(--site-black);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  height: 8%;
-  border-top: 4px #070d0e double;
-  border-bottom: 4px #070d0e double;
+  justify-content: center;
+  height: 34%;
 } #homepage-intro div {
-  background-color: #15272b;
+  background-color: var(--site-black);
 }
 
 /* Homepage : Introduction : Image - - - - - - - - - - - - - - - - - - - - - */
@@ -497,9 +501,10 @@ button.styled {
 #homepage-intro .text-box {
   height: 100%;
   width: 100%;
-  padding: 2%;
   align-items: center;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 #homepage-intro p {
@@ -528,11 +533,11 @@ button.styled {
   grid-column: 1 / 13;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  background-color: #0e1a1c;
+  background-color: var(--site-black);
   border-radius: 1% / 2%;
-  border: 1px #DDDDDD solid;
+  border: 0px #DDDDDD solid;
   padding: 1%;
-    position: relative;
+  position: relative;
   top: 0px;
   transition: top ease 0.4s;
 } #homepage-breakdown .section:hover {
@@ -551,7 +556,7 @@ button.styled {
   }
   #homepage-breakdown .section {
     grid-template-columns: 1fr; 
-    display: flex;  /* Change to flex for ordering */
+    display: flex; 
     flex-direction: column;
   }
   
@@ -569,21 +574,22 @@ button.styled {
 
 .left-panel{
   grid-column: 1 / 4;
-  background-color: #0e1a1c;
+  background-color: var(--site-black);
 }
 .right-panel{
+  padding: 2%;
   grid-column: 4 / 13;
-  background-color: #0e1a1c;
+  background-color: var(--site-black);
 }
 
 .conv-left-panel{
   grid-column: 1 / 10;
-  background-color: #0e1a1c;
+  background-color: var(--site-black);
 }
 
 .conv-right-panel{
   grid-column: 10 / 13;
-  background-color: #0e1a1c;
+  background-color: var(--site-black);
 }
 
 #homepage-breakdown .contents {
@@ -591,23 +597,22 @@ button.styled {
   height: 100%;
   border-radius: 1%/2%;
   box-sizing: border-box;
-  background-color: #0e1a1c;
+  background-color: var(--site-black);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 2%;
+  padding: 0% 5% 2% 2%;
   position: relative;
   top: 0px;
   transition: top ease 0.4s;
 }
 
 .h-box {
-  background-color: #0e1a1c;
-  border-top: 2px #DDDDDD solid;
+  background-color: var(--site-black);
   border-bottom: 1px #DDDDDD solid;
   padding: 2% 1%;
-  margin: 0 0 2% 0;
+  margin: 0% 0 2% 0;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -628,9 +633,9 @@ button.styled {
 
 #homepage-breakdown h2 {
   font-size: 3em;
-  color: #DDDDDD;
+  color: var(--site-teal);
   margin: 0;
-  background-color: #0e1a1c;
+  background-color: var(--site-black);
 }
 
 #homepage-breakdown h3 {
@@ -638,13 +643,13 @@ button.styled {
   font-size: 1.5em;
   margin: 0;
   white-space: pre;
-  background-color: #0e1a1c;
+  background-color: var(--site-black);
 }
 
 #homepage-breakdown .text-box {
   height: 100%;
   width: 100%;
-  background-color: #0e1a1c;
+  background-color: var(--site-black);
 } #homepage-breakdown .text-box p {
   font-size: 2rem;
   font-family: 'Times New Roman', Times, serif;
@@ -656,7 +661,7 @@ button.styled {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: #0e1a1c;
+  background-color: var(--site-black);
 } #homepage-breakdown .button-box a {
   font-size: 2rem;
   font-family: 'Courier New', Courier, monospace;
