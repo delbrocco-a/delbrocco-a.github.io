@@ -19,6 +19,7 @@
 }
 
 :root {
+  --dead-black: #000000;
   --site-black: #0c0908;
   --site-teal: #008080;
   --site-teal-w: #92C9C9;
@@ -26,7 +27,7 @@
 }
 
 html {
-  background-color: var(--site-black);
+  background-color: var(--dead-black);
   font-size: calc((1vh + 1vw)*.4); /*Sets value for other element's reference*/
   height: 100vh; /*Deduced size from viewport*/
   width: 99.5vw; /*Not 100 from scroll bar*/
@@ -109,7 +110,7 @@ body {
 main {
   height: 100%;
   width: 100%;
-  background-color: var(--site-black);
+  background-color: var(--dead-black);
 }
 
 main.homepage {
@@ -482,10 +483,10 @@ button.styled {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 34%;
+  height: 40%;
 } #homepage-intro div {
-  background: #0C0908;
-background: linear-gradient( -1deg,
+  background: var(--dead-black);
+  background: linear-gradient( 0deg,
   #000000 0%,
   #0C0908 35%,
   #4a5a6a 41%,
@@ -550,9 +551,8 @@ background: linear-gradient( -1deg,
   grid-column: 1 / 13;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  background-color: var(--site-black);
+  background-color: var(--dead-black);
   border-radius: .5% / 2%;
-  border: 0px #DDDDDD solid;
   padding: 1%;
   position: relative;
   top: 0px;
@@ -578,6 +578,7 @@ background: linear-gradient( -1deg,
 
 #homepage-breakdown .section:hover {
   top: -10px;
+  border: .5px #FFFFFF solid;
 }
 
 #homepage-breakdown .section > * {
