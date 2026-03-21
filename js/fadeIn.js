@@ -14,6 +14,6 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 const hiddenElements = document.querySelectorAll(
-  '.hidden-left, .hidden-right' 
+  '.hidden-left, .hidden-right, .fade-in' 
 );
 hiddenElements.forEach((el) => observer.observe(el));
