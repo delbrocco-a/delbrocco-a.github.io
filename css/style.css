@@ -228,7 +228,7 @@ main { /*--------------------------------------------------------------------*/
 }
 
 button.styled {
-  background-color: var(--site-black);
+  background-color: var(--dead-black);
   box-sizing: border-box;
   border: #000000 solid 1px;
   float: left;
