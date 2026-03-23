@@ -8,8 +8,8 @@ document.getElementById("to-top").addEventListener(
 
 document.getElementById('scroll-down').addEventListener(
   'click', function scrollDown() {
-      window.scroll({top: 1000, behavior: "smooth"})
-      document.documentElement.scrollTop = 1000;
-      document.body.scrollTop = 1000;
+      window.scroll({top: 830, behavior: "smooth"})
+      document.documentElement.scrollTop = 830;
+      document.body.scrollTop = 830;
   }
 );

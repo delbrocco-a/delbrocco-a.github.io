@@ -149,7 +149,8 @@ nav ul a {
 
 
 main { /*--------------------------------------------------------------------*/
-  height: 250vh;
+  min-height: 100vh;
+  height: auto;
 }
 
 #homepage-intro {
@@ -159,6 +160,7 @@ main { /*--------------------------------------------------------------------*/
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100vw;
 }
 
 #homepage-intro div {
@@ -261,21 +263,21 @@ button.styled {
 #homepage-breakdown {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  grid-auto-rows: 33vh;
-  gap: 7vh;
+  gap: 4vh;
   background-color: #04010A;
   padding: 10%;
-  max-height: 70%;
+  min-height: 100vh;
+  width: 100vw;
+  height: auto;
 }
 
 #homepage-breakdown .section {
   grid-column: 1 / 13;
+    border: .5px #FFFFFF solid transparent;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   background-color: var(--dead-black);
-  border-radius: .5% / 2%;
-  padding: 1%;
+  border-radius: .5% / 5%;
   position: relative;
   top: 0px;
 } #homepage-breakdown .section::before {
@@ -308,7 +310,7 @@ button.styled {
   z-index: 1;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
 
   .section {
     max-width: 390px;
@@ -319,9 +321,15 @@ button.styled {
   }
 
   #homepage-breakdown {
-    height: 100%;
-    width: 100%;
-    padding: 0%;
+    height: auto;
+    min-height: 100vh;
+    grid-auto-rows: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    width: 100vw;
+    padding: 2%;
     margin: 0%;
   }
 
@@ -329,7 +337,10 @@ button.styled {
     grid-auto-columns: max-content;
     grid-template-columns: 1fr; 
     display: flex;
+    min-height: 40vh;
+    height: auto;
     flex-direction: column;
+    border-radius: 1%/2%;
   }
   
   .left-panel,
@@ -355,7 +366,6 @@ button.styled {
 }
 
 .right-panel {
-  padding: 2%;
   grid-column: 4 / 13;
 }
 
@@ -477,7 +487,7 @@ p.in-container {
   width: 100%;
 } #homepage-breakdown .text-box p {
   font-size: 2rem;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #homepage-breakdown .button-box {
@@ -542,7 +552,7 @@ p.in-container {
 
 
 footer { /*------------------------------------------------------------------*/
-  height: 15%;
+  height: 100%;
   background-color: var(--site-black);
   color: #DDDDDD;
   padding: 2% 10%;
