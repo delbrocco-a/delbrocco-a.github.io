@@ -282,6 +282,7 @@ button.styled {
   border-radius: 6px;
   position: relative;
   top: 0px;
+  max-width: 80vw;
 } #homepage-breakdown .section::before {
   content: '';
   position: absolute;
@@ -315,12 +316,10 @@ button.styled {
 @media (max-width: 768px) {
 
   .section {
-    max-width: 390px;
+    max-width: 90vw;
   }
 
-  main.homepage {
-    height: 340%;
-  }
+  
 
   #homepage-breakdown {
     height: auto;
@@ -532,27 +531,24 @@ p.in-container {
 .fade-in {
   opacity: 0;
 
-  transition: all 1s ease-in;
+  transition: all .8s ease;
 }
 
 .hidden-left {
   opacity: 0;
   transform: translateX(-100%);
-  filter: blur(2px);
-  transition: opacity .7s, transform .7s;
+  transition: all .8s;
 }
 
 .hidden-right {
   opacity: 0;
   transform: translateX(100%);
-  filter: blur(2px);
-  transition: opacity .7s, transform .7s;
+  transition: all .8s;
 }
 
 .show {
   opacity: 1 !important;
   transform: none;
-  filter: blur(0px);
 }
 
 .hidden-left:nth-child(2),
