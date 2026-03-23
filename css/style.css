@@ -344,6 +344,7 @@ button.styled {
     height: auto;
     flex-direction: column;
     border-radius: 6px;
+    transition: 1s ease-in;
   }
 
   #homepage-breakdown p {
@@ -530,7 +531,7 @@ p.in-container {
 
 .fade-in {
   opacity: 0;
-  transform: translateZ(-100%);
+
   transition: all 1s ease-in;
 }
 
@@ -538,14 +539,14 @@ p.in-container {
   opacity: 0;
   transform: translateX(-100%);
   filter: blur(2px);
-  transition: all .7s;
+  transition: opacity .7s, transform .7s;
 }
 
 .hidden-right {
   opacity: 0;
   transform: translateX(100%);
   filter: blur(2px);
-  transition: all .7s;
+  transition: opacity .7s, transform .7s;
 }
 
 .show {
