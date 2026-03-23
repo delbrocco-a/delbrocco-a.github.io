@@ -367,6 +367,12 @@ button.styled {
     height: 100%;
     border-radius: 6px;
   }
+
+  .hidden-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all .7s;
+  }
 }
 
 .left-panel {
