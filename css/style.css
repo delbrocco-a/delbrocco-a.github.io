@@ -33,8 +33,7 @@
   --full-width: 99.5vw; /* .5 for scrollbar */
   --full-height: 100vh;
 
-  --font-size: clamp(12px, calc((1vh + 1vw) * 0.5), 24px);
-  --header-height: 5vh;
+  --font-size: calc((1vh + 1vw) * .5);
 
   --nav-bar-height: 5vh;
 }
@@ -49,15 +48,15 @@ html {
 }
 
 h1 {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-size: 2rem;
 }
 
 hr {
@@ -341,11 +340,7 @@ button.styled {
     min-height: 40vh;
     height: auto;
     flex-direction: column;
-    border-radius: 2%/1.5%;
-  }
-
-  #homepage-breakdown img {
-    border-radius: 3%/3%;
+    border-radius: 1%/2%;
   }
   
   .left-panel,
@@ -467,6 +462,7 @@ p.in-container {
 }
 
 #homepage-breakdown h2 {
+  font-size: 3em;
   color: var(--site-teal);
   margin: 0;
   transition: all linear .2s;
@@ -476,6 +472,7 @@ p.in-container {
 
 #homepage-breakdown h3 {
   color: #888888;
+  font-size: 1.5em;
   margin: 0;
 } #homepage-breakdown h3 a {
   color: #888888;
@@ -492,14 +489,10 @@ p.in-container {
   font-size: 1.2rem;
   height: 100%;
   width: 100%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-#homepage-breakdown .right-column p {
-  font-size: .8rem;
-  color: #AAAAAA;
   display: flex;
   align-items: center;
+  justify-content: right;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #homepage-breakdown .button-box {
