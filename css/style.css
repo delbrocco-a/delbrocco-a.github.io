@@ -425,7 +425,7 @@ img.in-container {
 }
 
 #homepage-breakdown img.in-container {
-  border-radius: 2%;
+  border-radius: 6px;
 }
 
 p.in-container {
