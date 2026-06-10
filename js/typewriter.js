@@ -1,10 +1,13 @@
 const text = 
-  "Alexander is a penultimate-year Computer Science student pursuing an " +
-  "integrated masters at the University of Leeds. Alongside his studies, " +
-  "he's engaged in benchmarking QML algorithms as part of his dissertation, " +
-  "and undergoing military leadership training at his local UOTC unit. " +
-  "Outside of campus, when he's not buried in some book, he's out on a " +
-  "hike or at some cosy pub, deep in conversation amongst his friends.";
+  "Alexander is an industrial-year Computer Science student pursuing an " + 
+  "integrated masters at the University of Leeds. Currently on placement at " +
+  "DWP Digital, he works across cloud applications, infrastructure, " + 
+  "internal platforms and automated workflows, building systems used at " + 
+  "scale across the UK's largest government department. Alongside this, he " +
+  "has conducted research into benchmarking quantum machine learning " +
+  "algorithms for medical diagnostics, completed 3 years of under-officer " +
+  "military leadership training in the YOTR (UOTC), and an active student " +
+  "society member and course representative. ";
 
 const prompt = document.getElementById('prompt');
 prompt.textContent = getTime();
