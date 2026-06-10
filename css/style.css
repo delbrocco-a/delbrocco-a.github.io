@@ -2,8 +2,8 @@
  * Master Stylesheet ~
  *    Styles all website pages for personal portfolio website with CSS3,
  *    also working with JavaScript for increased dynamic content to the page
- * 
- * Author(s): Alexander Del Brocco                                               
+ *
+ * Author(s): Alexander Del Brocco
  * Started  : 30th of January, 2024
 =============================================================================*/
 
@@ -23,12 +23,16 @@
 }
 
 :root {
-  --dead-black: #000000;
-  --site-black: #0c0908;
-  --site-teal: #008080;
-  --site-teal-w: #92C9C9;
-  --text-white: #DDDDDD;
-  --site--white: #EEEEEE;
+  --dead-black:    #000000;
+  --site-black:    #0c0908;
+  --site-teal:     #008080;
+  --site-teal-w:   #92C9C9;
+  --site-teal-dark:#284854;
+  --text-white:    #DDDDDD;
+  --site-white:    #EEEEEE;
+  --site-gray:     #AAAAAA;
+  --site-gray-dim: #888888;
+  --site-bg-deep:  #04010A;
 
   --full-width: 99.5vw; /* .5 for scrollbar */
   --full-height: 100vh;
@@ -64,7 +68,7 @@ hr {
 }
 
 p {
-  color: var(--site--white);
+  color: var(--site-white);
   font-size: 1.5rem;
   text-align: left;
 }
@@ -84,7 +88,6 @@ nav {
   background-color: var(--site-black);
   color: var(--site-teal);
   font-size: var(--font-size);
-  height: fit-content;
   position: fixed;
   width: 99.5vw;
   height: var(--nav-bar-height);
@@ -129,7 +132,7 @@ nav ul a {
   animation: navFizzOut .2s;
   background-color: var(--site-black);
   color: var(--site-teal);
-  font-weight: 450;
+  font-weight: 500;
   font-size: 1.5rem;
   text-decoration: none;
   display: flex;
@@ -175,7 +178,7 @@ main { /*--------------------------------------------------------------------*/
 }
 
 #homepage-intro p {
-  color: #AAAAAA;
+  color: var(--site-gray);
   font-size: 1.7em;
 }
 
@@ -192,7 +195,7 @@ main { /*--------------------------------------------------------------------*/
 }
 
 .terminal {
-  background: #0c0908;
+  background: var(--site-black);
   padding: 1.5rem 2rem;
   font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
   min-height: 120px;
@@ -206,7 +209,7 @@ main { /*--------------------------------------------------------------------*/
 .terminal-text {
   font-size: 15px;
   line-height: 1.7;
-  color: #AAAAAA;
+  color: var(--site-gray);
   font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
   white-space: pre-wrap;
   word-break: break-word;
@@ -216,7 +219,7 @@ main { /*--------------------------------------------------------------------*/
   display: inline-block;
   width: 8px;
   height: 1.1em;
-  background: #AAAAAA;
+  background: var(--site-gray);
   vertical-align: text-bottom;
   margin-left: 1px;
   animation: blink 1s step-end infinite;
@@ -230,13 +233,13 @@ main { /*--------------------------------------------------------------------*/
 button.styled {
   background-color: var(--dead-black);
   box-sizing: border-box;
-  border: #000000 solid 1px;
+  border: var(--dead-black) solid 1px;
   float: left;
   margin: 0% 1.25%;
   padding: 2% 2%;
   transition: ease .2s;
 } button.styled a {
-  color: #DDDDDD;
+  color: var(--text-white);
   font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
   text-decoration: underline;
   position: relative;
@@ -246,13 +249,11 @@ button.styled {
   width: 100%;
   height: 100%;
 } button.styled:hover {
-  border-radius: 4%/10%;
-  border: 1px var(--site-teal) solid;
-  border-color: #284854;
+  border: 1px var(--site-teal-dark) solid;
   border-radius: 2%/4%;
-  color: #284854;
+  color: var(--site-teal-dark);
 } button.styled:hover a {
-  color: #284854;
+  color: var(--site-teal-dark);
   text-decoration: transparent;
   top: -1px;
 }
@@ -264,7 +265,7 @@ button.styled {
   grid-template-rows: repeat(12, 1fr);
   grid-auto-rows: 33vh;
   gap: 7vh;
-  background-color: #04010A;
+  background-color: var(--site-bg-deep);
   padding: 10%;
   max-height: 70%;
 }
@@ -284,10 +285,10 @@ button.styled {
   inset: 0;
   border-radius: inherit;
   background: linear-gradient(
-    0deg, 
-    #008080 0%, 
-    #004747 12%, 
-    #0C0908 50%, 
+    0deg,
+    #008080 0%,
+    #004747 12%,
+    #0C0908 50%,
     #000000 100%
   );
   opacity: 0;
@@ -314,10 +315,6 @@ button.styled {
     max-width: 390px;
   }
 
-  main.homepage {
-    height: 340%;
-  }
-
   #homepage-breakdown {
     height: 100%;
     width: 100%;
@@ -327,21 +324,21 @@ button.styled {
 
   #homepage-breakdown .section {
     grid-auto-columns: max-content;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     display: flex;
     flex-direction: column;
   }
-  
+
   .left-panel,
   .right-panel,
   .conv-left-panel,
   .conv-right-panel {
-    grid-column: 1 / 13; 
+    grid-column: 1 / 13;
     width: 100%;
   }
 
   .conv-left-panel {
-    order: 2; 
+    order: 2;
   }
 
   img {
@@ -365,23 +362,6 @@ button.styled {
 
 .conv-right-panel {
   grid-column: 10 / 13;
-}
-
-#lean-left {
-  left: 0px;
-  position: relative;
-  transition: ease .4s;
-} #lean-left:hover {
-  left: -10px;
-}
-
-#lean-right {
-  right: 0px;
-  position: relative;
-  transition: ease .4s;
-} #lean-right:hover {
-  animation: sectionLeanLeft .2s; 
-  right: -10px;
 }
 
 .centre-width {
@@ -430,7 +410,7 @@ p.in-container {
 }
 
 .h-box {
-  border-bottom: 1px #DDDDDD solid;
+  border-bottom: 1px var(--text-white) solid;
   padding: 2% 1%;
   margin: 0% 0 2% 0;
   overflow: hidden;
@@ -457,15 +437,15 @@ p.in-container {
   margin: 0;
   transition: all linear .2s;
 } #homepage-breakdown h2:hover {
-  color: #92C9C9;
+  color: var(--site-teal-w);
 }
 
 #homepage-breakdown h3 {
-  color: #888888;
+  color: var(--site-gray-dim);
   font-size: 1.5em;
   margin: 0;
 } #homepage-breakdown h3 a {
-  color: #888888;
+  color: var(--site-gray-dim);
   transition: all .1s;
 } #homepage-breakdown h3 a:hover {
   text-decoration: underline;
@@ -493,12 +473,6 @@ p.in-container {
   padding: 10% 5%;
 }
 
-#in-row {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-}
-
 .fade-in {
   opacity: 0;
   transform: translateZ(-100%);
@@ -520,7 +494,7 @@ p.in-container {
 }
 
 .show {
-  opacity: 1 !important;
+  opacity: 1;
   transform: none;
   filter: blur(0px);
 }
@@ -544,7 +518,7 @@ p.in-container {
 footer { /*------------------------------------------------------------------*/
   height: 15%;
   background-color: var(--site-black);
-  color: #DDDDDD;
+  color: var(--text-white);
   padding: 2% 10%;
   display: flex;
   flex-direction: row;
@@ -553,7 +527,7 @@ footer { /*------------------------------------------------------------------*/
 }
 
 footer a {
-  color: #DDDDDD;
+  color: var(--text-white);
 } footer a:hover {
   text-decoration: underline;
 }
@@ -566,8 +540,8 @@ footer div.copyright {
   padding: 0% 0% 2% 0%;
 }
 
-footer div.seperator {
-  border-left: 1px solid #DDDDDD;
+footer div.separator {
+  border-left: 1px solid var(--text-white);
   height: 80%;
   width: 1%;
 }
@@ -576,7 +550,7 @@ footer div.map {
   width: 70%;
 }
 
-footer div.map ul.map  {
+footer div.map ul.map {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -584,8 +558,12 @@ footer div.map ul.map  {
   padding-left: 0%;
 }
 
-footer div.map ul.map ul {
+footer div.map ul.map > li {
   width: 25%;
+}
+
+footer div.map ul.map ul {
+  width: 100%;
   list-style: none;
   padding-left: 0%;
 }

@@ -1,13 +1,16 @@
-const text = 
-  "Alexander is an industrial-year Computer Science student pursuing an " + 
+const text =
+  "Alexander is an industrial-year Computer Science student pursuing an " +
   "integrated masters at the University of Leeds. Currently on placement at " +
-  "DWP Digital, he works across cloud applications, infrastructure, " + 
-  "internal platforms and automated workflows, building systems used at " + 
+  "DWP Digital, he works across cloud applications, infrastructure, " +
+  "internal platforms and automated workflows, building systems used at " +
   "scale across the UK's largest government department. Alongside this, he " +
   "has conducted research into benchmarking quantum machine learning " +
   "algorithms for medical diagnostics, completed 3 years of under-officer " +
   "military leadership training in the YOTR (UOTC), and an active student " +
   "society member and course representative. ";
+
+const TYPING_SPEED_MS = 18;
+const INITIAL_DELAY_MS = 400;
 
 const prompt = document.getElementById('prompt');
 prompt.textContent = getTime();
@@ -21,7 +24,7 @@ function type() {
   if (index < text.length) {
     output.textContent = text.slice(0, ++index);
     output.appendChild(cursor);
-    setTimeout(type, 18);
+    setTimeout(type, TYPING_SPEED_MS);
   }
 }
 
@@ -34,4 +37,4 @@ function getTime() {
 }
 
 output.appendChild(cursor);
-setTimeout(type, 400);
+setTimeout(type, INITIAL_DELAY_MS);
